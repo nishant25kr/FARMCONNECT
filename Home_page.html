@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-land</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .agroconnect-header {
+            background-color: #007bff;
+            color: white;
+            border: 2px solid #0056b3;
+            border-radius: 15px;
+            padding: 10px 22px;
+            margin: 10px 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            text-align: center;
+            box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+
+        }
+
+        .agroconnect-header:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+            scale: 1.02;
+            /* transform: translateY(-2px); */
+        }
+
+        .loginbutton {
+            /* background-color: hsl(230, 95%, 75%); */
+            background-color: #007bff;
+            border: 0px solid #f7f8f9;
+            border: 1px solid #f7f8f9;
+            border-radius: 10px;
+            color: white;
+            padding: 5px;
+            margin: 0px 15px;
+            font-size: 14px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+
+        }
+
+        img {
+            border: 2px solid #6eb4ff;
+
+        }
+
+        .loginbutton:hover {
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .imgin {
+            width: 400px;
+            /* scale: 1.1; */
+            transition: all 3s;
+            animation: scalein 5s ease-in-out infinite;
+            margin: 5px;
+            border-radius: 25px;
+            /* 3s duration, infinite loop */
+
+        }
+
+        .imgout {
+            border-radius: 25px;
+            width: 400px;
+            transition: all 3s;
+            animation: scaleout 5s ease-in-out infinite;
+            margin: 5px;
+        }
+
+        @keyframes scalein {
+            0% {
+                transform: scale(0.93);
+            }
+
+            50% {
+                transform: scale(1.07);
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+                border: 2px solid #0459b5;
+
+
+
+            }
+
+            100% {
+                transform: scale(0.93);
+            }
+        }
+
+        @keyframes scaleout {
+            0% {
+                transform: scale(1.07);
+            }
+
+            50% {
+                transform: scale(0.93);
+            }
+
+            100% {
+                transform: scale(1.07);
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div>
+
+  
+
+    <nav class="navbar  bg-primary">
+
+        <ol class="nav nav-underline bg-primary  ">
+            <h3 class="agroconnect-header">AgroConnect</h3>
+            <li class="nav-item "><a href="" class="nav-link text-light">Home</a></li>
+            <li class="nav-item "><a href="" class="nav-link active text-light">About</a></li>
+            <li class="nav-item "><a href="" class="nav-link text-light">Yourland</a></li>
+            <li class="nav-item "><a href="" class="nav-link text-light">Contact</a></li>
+        </ol>
+        <button class="loginbutton text-dark">
+            Login/Signup
+        </button>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row align-items-center ">
+            <div class="col-md-5">
+                <h1>Empowering Farmers & Landowners</h1>
+                <p>Welcome to AgroConnect, a platform designed to connect landowners and farmers/workers. Whether you
+                    are a farmer looking for land to work on or a landowner needing skilled workers, we provide a
+                    seamless way to meet your agricultural needs.</p>
+                <p>Farmers can rent land on a daily basis to cultivate crops, manage livestock, or engage in other
+                    farming activities. In turn, landowners can offer their land and pay workers based on the area of
+                    land worked and the tasks performed. It's a fair, transparent, and efficient way to help grow the
+                    future of agriculture.</p>
+                <button class="btn btn-primary rounded-4">Rent Land Today</button>
+                <button class="btn btn-outline-primary rounded-4">Hire a Worker</button>
+            </div>
+            <div class="col-md-7 rounded-4  h-100 p-2">
+                <div class=" rounded-4 ">
+                    <div class="row m-3">
+                        <div class="col-md-6  rounded-5 img_div "><img class=" img-fluid  imgin " src="images/pic1.jpg"
+                                alt="">
+                        </div>
+                        <div class="col-md-6 rounded-5 img_div "><img class=" img-fluid imgout" src="images/pic2.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="row m-3">
+                        <div class="col-md-6 rounded-5 img_div"><img class=" img-fluid imgout" src="images/pic3.jpg"
+                                alt="">
+                        </div>
+                        <div class="col-md-6  rounded-5 img_div "><img class=" img-fluid imgin" src="images/pic4.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2025 AgriConnect. All Rights Reserved.</p>
+    </footer>
+
+</div>
+
+
+</body>
+
+</html>
