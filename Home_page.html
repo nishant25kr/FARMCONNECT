@@ -53,8 +53,9 @@
 
         }
 
-        img {
-            border: 2px solid #6eb4ff;
+        img{
+            border: 0.8px solid #9163f4;
+            box-shadow: 2px 2px 7px rgb(100, 99, 121);
 
         }
 
@@ -63,7 +64,7 @@
         }
 
         .imgin {
-            width: 400px;
+            width: 350px;
             /* scale: 1.1; */
             transition: all 3s;
             animation: scalein 5s ease-in-out infinite;
@@ -75,7 +76,7 @@
 
         .imgout {
             border-radius: 25px;
-            width: 400px;
+            /* width: 400px; */
             transition: all 3s;
             animation: scaleout 5s ease-in-out infinite;
             margin: 5px;
@@ -88,10 +89,6 @@
 
             50% {
                 transform: scale(1.07);
-                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-                border: 2px solid #0459b5;
-
-
 
             }
 
@@ -113,70 +110,85 @@
                 transform: scale(1.07);
             }
         }
+
+        .content-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            margin: auto;
+            flex: 1;
+            
+        }
     </style>
 </head>
 
 <body>
-<div>
+    <div class="content-wrapper ">
 
-  
+        <header>
+            <nav class="navbar  bg-primary">
 
-    <nav class="navbar  bg-primary">
+                <ol class="nav nav-underline bg-primary  ">
+                    <h3 class="agroconnect-header">AgroConnect</h3>
+                    <li class="nav-item ms-3"><a href="" class="nav-link active  text-light">Home</a></li>
+                    <li class="nav-item ms-3"><a href="About.html" class="nav-link text-light">About</a></li>
+                    <li class="nav-item ms-3"><a href="" class="nav-link text-light">Yourland</a></li>
+                    <li class="nav-item ms-3"><a href="" class="nav-link text-light">Contact</a></li>
+                </ol>
+                <button class="loginbutton text-dark">
+                    Login/Signup
+                </button>
+            </nav>
 
-        <ol class="nav nav-underline bg-primary  ">
-            <h3 class="agroconnect-header">AgroConnect</h3>
-            <li class="nav-item "><a href="" class="nav-link text-light">Home</a></li>
-            <li class="nav-item "><a href="" class="nav-link active text-light">About</a></li>
-            <li class="nav-item "><a href="" class="nav-link text-light">Yourland</a></li>
-            <li class="nav-item "><a href="" class="nav-link text-light">Contact</a></li>
-        </ol>
-        <button class="loginbutton text-dark">
-            Login/Signup
-        </button>
-    </nav>
-
-    <div class="container mt-5">
-        <div class="row align-items-center ">
-            <div class="col-md-5">
-                <h1>Empowering Farmers & Landowners</h1>
-                <p>Welcome to AgroConnect, a platform designed to connect landowners and farmers/workers. Whether you
-                    are a farmer looking for land to work on or a landowner needing skilled workers, we provide a
-                    seamless way to meet your agricultural needs.</p>
-                <p>Farmers can rent land on a daily basis to cultivate crops, manage livestock, or engage in other
-                    farming activities. In turn, landowners can offer their land and pay workers based on the area of
-                    land worked and the tasks performed. It's a fair, transparent, and efficient way to help grow the
-                    future of agriculture.</p>
-                <button class="btn btn-primary rounded-4">Rent Land Today</button>
-                <button class="btn btn-outline-primary rounded-4">Hire a Worker</button>
-            </div>
-            <div class="col-md-7 rounded-4  h-100 p-2">
-                <div class=" rounded-4 ">
-                    <div class="row m-3">
-                        <div class="col-md-6  rounded-5 img_div "><img class=" img-fluid  imgin " src="images/pic1.jpg"
-                                alt="">
+        </header>
+        <main class="main-content m-5  ">
+            <div class="row align-items-center ">
+                <div class="col-md-6 ">
+                    <h1>Empowering <span class="text-primary">Farmers</span> & Landowners</h1>
+                    <p>Welcome to AgroConnect, a platform designed to connect landowners and farmers/workers. Whether
+                        you
+                        are a farmer looking for land to work on or a landowner needing skilled workers, we provide a
+                        seamless way to meet your agricultural needs.</p>
+                    <p>Farmers can rent land on a daily basis to cultivate crops, manage livestock, or engage in other
+                        farming activities. In turn, landowners can offer their land and pay workers based on the area
+                        of
+                        land worked and the tasks performed. It's a fair, transparent, and efficient way to help grow
+                        the
+                        future of agriculture.</p>
+                    <button class="btn btn-primary rounded-4">Rent Land Today</button>
+                    <button class="btn btn-outline-primary rounded-4">Hire a Worker</button>
+                </div>
+                <div class="col-md-6 rounded-4 mt-5 h-100 p-1">
+                    <div class=" rounded-4   ">
+                        <div class="row m-2  ">
+                            <div class="col-md-6  rounded-5 img_div "><img class=" img-fluid  imgin "
+                                    src="images/pic1.jpg" alt="">
+                            </div>
+                            <div class="col-md-6 rounded-5 img_div "><img class=" img-fluid imgout"
+                                    src="images/pic2.jpg" alt="">
+                            </div>
                         </div>
-                        <div class="col-md-6 rounded-5 img_div "><img class=" img-fluid imgout" src="images/pic2.jpg"
-                                alt="">
-                        </div>
-                    </div>
-                    <div class="row m-3">
-                        <div class="col-md-6 rounded-5 img_div"><img class=" img-fluid imgout" src="images/pic3.jpg"
-                                alt="">
-                        </div>
-                        <div class="col-md-6  rounded-5 img_div "><img class=" img-fluid imgin" src="images/pic4.jpg"
-                                alt="">
+                        <div class="row m-3  ">
+                            <div class="col-md-6 rounded-5 img_div"><img class=" img-fluid imgout" src="images/pic3.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-md-6  rounded-5 img_div "><img class=" img-fluid imgin"
+                                    src="images/pic4.jpg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
+
+        <footer class="bg-light text-center py-3">
+            <p>&copy; 2025 AgriConnect. All Rights Reserved.</p>
+        </footer>
+
     </div>
-
-    <footer class="bg-light text-center py-4">
-        <p>&copy; 2025 AgriConnect. All Rights Reserved.</p>
-    </footer>
-
-</div>
 
 
 </body>
