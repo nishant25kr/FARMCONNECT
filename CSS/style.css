@@ -27,7 +27,7 @@ html {
 
 .agroconnect-header:hover {
     background-color: #778A35;
-    border-color: #778A35;
+    border-color: #050505;
     scale: 1.02;
     /* transform: translateY(-2px); */
 }

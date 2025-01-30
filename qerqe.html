@@ -2,12 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Button Dynamically</title>
 </head>
 <body>
-    <input type="checkbox" id="place">
-    <option value="adad" id="place">ludhiana</option>
+
+    <!-- Button to trigger the creation of a new button -->
+    <button onclick="demo()">Click Me</button>
+    
+    <!-- The container where the new button will be appended -->
+    <div id="button-container" style="border: 2px solid black; width: 400px; height: 400px;"></div>
+
+    <script>
+        function demo(uid) {
+
+            const newButton = document.createElement("button");
+            newButton.innerText = "New Dynamic Button";
+            newButton.onclick = function() {
+                alert("You clicked the new button!");
+            };
+            const container = document.getElementById("button-container");
+            container.appendChild(newButton);
+        }
+    </script>
+
 </body>
 </html>

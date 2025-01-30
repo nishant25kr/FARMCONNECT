@@ -12,7 +12,11 @@
         crossorigin="anonymous"></script>
 
     <style>
-       
+        .body {
+            margin: 0px;
+            padding: 0px;
+        }
+
         .agroconnect-header {
             background-color: #778A35;
             color: white;
@@ -27,18 +31,15 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
-
         }
 
         .agroconnect-header:hover {
             background-color: #778A35;
-            border-color: #778A35;
+            border-color: #050505;
             scale: 1.02;
-            /* transform: translateY(-2px); */
         }
 
         .loginbutton {
-            /* background-color: hsl(230, 95%, 75%); */
             background-color: #778A35;
             border: 1px solid#31352E;
             border-radius: 10px;
@@ -50,24 +51,15 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
-
         }
 
-        img{
+        img {
             border: 0.8px solid #31352E;
             box-shadow: 2px 2px 7px #31352E;
-
         }
 
         .loginbutton:hover {
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .container_box{
-            /* border: 2px solid black; */
-            margin: 0px;
-            padding: 0px;
-
         }
 
         @keyframes scalein {
@@ -99,72 +91,258 @@
             }
         }
 
-        
+        .vertical-line {
+            width: 1px;
+            /* Line thickness */
+            background-color: #333;
+            /* Line color */
+            height: 100vh;
+            /* Adjust the height as needed */
+        }
 
-        .main-content {
-            margin: auto;
-            flex: 1;
-            
+        .line-container {
+            height: 300px;
+            /* Define a height for the row */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .filter-header {
+            position: sticky;
+            width: 90%;
+            height: auto;
+            /* border: 1px solid #333; */
+            background-color: #717e42;
+            ;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+        }
+
+        .filter-header span {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .filter-header button {
+            /* padding: 8px 15px; */
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .filter-header button:hover {
+            background-color: #45a049;
+        }
+
+        .filter-header p {
+            margin: 0;
+            font-size: 14px;
         }
     </style>
 </head>
 
 <body style="background-color: #EBEBE8;">
     <div class="content-wrapper ">
+        <header style="position: sticky;">
+            <nav class="navbar navbar-expand-lg" style="background-color: #778A35; ">
+                <div class="container-fluid d-flex align-items-center">
+                    <!-- Brand Name -->
+                    <a class="navbar-brand text-light fw-bold fs-3 agroconnect-header" href="#">AgroConnect</a>
 
-        <header>
-            <nav class="navbar  " style="background-color: #778A35;" > 
+                    <button class="navbar-toggler text-light border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <ol class="nav nav-underline  " style="background-color: #778A35;">
-                    <h3 class="agroconnect-header">AgroConnect</h3>
-                    <li class="nav-item ms-3"><a href="Index.html" class="nav-link  text-light">Home</a></li>
-                    <li class="nav-item ms-3"><a href="About.html" class="nav-link text-light">About</a></li>
-                    <li class="nav-item ms-3"><a href="" class="nav-link active  text-light">Yourland</a></li>
-                    <li class="nav-item ms-3"><a href="" class="nav-link text-light">Contact</a></li>
-                </ol>
-                <button class="loginbutton text-dark">
-                    Login/Signup
-                </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a href="Index.html" class="nav-link text-light " ">Home</a>
+                            </li>
+                            <li class=" nav-item">
+                                    <a href="About.html" class="nav-link text-light">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="buyland.html" class="nav-link active text-light"
+                                    style="border-bottom: 2px solid white;">Yourland</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link text-light">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="loginbutton">
+                        Login/Signup
+                    </button>
+                </div>
             </nav>
-
         </header>
-        <main class="container_box ">
-            <dic class="row border">
-                <div class="col-md-2 border p-2">
-                    <div class="d-flex border ">
-                        <div class="form-group">
-                            <label for="locationFilter" class="form-label">Location</label>
-                            <select id="locationFilter" class="form-select">
-                                <option value="all">All Locations</option>
-                                <option value="california">California</option>
-                                <option value="hawaii">Hawaii</option>
-                                <option value="colorado">Colorado</option>
-                            </select>
+
+        <div class="container-fluid div_div filter-sidebar">
+            <div class="row p-0 h-100">
+                <div class="col-md-2 mt-2 ">
+                    <h5 class="text-center mb-2" style="font-family: 'Roboto', sans-serif;">Filter Lands</h5>
+                    <hr>
+                    <label for="size-unit" class="form-label">Show Size in:</label>
+                    <div class="mb-2">
+                        <input type="radio" name="size-unit" id="hector" onclick="Unit('Hector')" value="Hector"
+                            class="form-check-input">
+                        <label for="hector" class="form-check-label">Hector</label>
+                    </div>
+                    <div class="mb-2">
+                        <input type="radio" name="size-unit" id="acre" onclick="Unit('Acer')" value="Acre"
+                            class="form-check-input">
+                        <label for="acre" class="form-check-label">Acre</label>
+                    </div>
+                    <div class="mb-2">
+                        <input type="radio" name="size-unit" id="bigha" onclick="Unit('Bigha')" value="Bigha"
+                            class="form-check-input">
+                        <label for="bigha" class="form-check-label">Bigha</label>
+                    </div>
+                    <div class="mb-2">
+                        <input type="radio" name="size-unit" id="kanal" onclick="Unit('Kanal')" value="Kanal"
+                            class="form-check-input">
+                        <label for="kanal" class="form-check-label">Kanal</label>
+                    </div>
+
+                    <hr>
+
+                    <label for="min-area" class="form-label">Land Size Range:</label>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <input type="number" id="min-area" name="min-area" placeholder="Min Size"
+                                class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label for="priceRange" class="form-label">Price Range</label>
-                            <select id="priceRange" class="form-select">
-                                <option value="all">All Prices</option>
-                                <option value="0-500000">Under $500,000</option>
-                                <option value="500000-1000000">$500,000 - $1,000,000</option>
-                                <option value="1000000-2000000">$1,000,000 - $2,000,000</option>
-                            </select>
+                        <div class="col-md-6">
+                            <input type="number" id="max-area" name="max-area" placeholder="Max Size"
+                                class="form-control">
                         </div>
-                        <button class="btn btn-primary" id="filterButton">Apply Filter</button>
+                        <button class="btn btn-primary rounded-4  " onclick="land_size()"
+                            style="padding: 3px; margin: 7px; width: 90px; margin-left: 70px; "> Apply</button>
+
+                    </div>
+
+                    <hr>
+
+                    <label for="location" class="form-label">Enter Location:</label>
+                    <input type="text" id="location" name="location"  class="form-control mb-3"
+                        placeholder="City, State, or Zip Code">
+                        <button class="btn btn-primary rounded-4  " onclick="Pincode()"
+                            style="padding: 3px; margin: 0px; width: 90px; margin-left: 70px; "> Apply</button>
+                    <hr>
+
+                    <label for="crops" class="form-label">Select Crops to Grow:</label>
+                    <div class="mb-2">
+                        <input type="checkbox" name="crops" onchange="Grow('wheat')" id="wheat" value="Wheat"
+                            class="form-check-input">
+                        <label for="wheat" class="form-check-label">Wheat</label>
+                    </div>
+                    <div class="mb-2">
+                        <input type="checkbox" name="crops" onclick="Grow('Rice')" id="rice" value="Rice"
+                            class="form-check-input">
+                        <label for="rice" class="form-check-label">Rice</label>
+                    </div>
+                    <div class="mb-2">
+                        <input type="checkbox" name="crops" onclick="Grow('Vegetables')" id="vegetables"
+                            value="Vegetables" class="form-check-input">
+                        <label for="vegetables" class="form-check-label">Vegetables</label>
+                    </div>
+                    <div class="mb-2">
+                        <input type="checkbox" name="crops" onclick="Grow('Fruits')" id="fruits" value="Fruits"
+                            class="form-check-input">
+                        <label for="fruits" class="form-check-label">Fruits</label>
+                    </div>
+                    <hr>
                 </div>
-                <div class="col-md-10 border p-2">
-                    hello
+
+                <div class="col-md-9 "
+                    style="border-left: 1px solid rgb(158, 158, 158) ;overflow: scroll; height: 100vh; ">
+
+
+                    <div class="filter-header  rounded-4 m-4" id="button-container" >
+                        <span>Filter Applied :</span>
+                        
+                    </div>
+
                 </div>
-            </dic>
-            
-            
-        </main>
+            </div>
+        </div>
 
         <footer class="bg-light text-center py-3">
             <p>&copy; 2025 AgriConnect. All Rights Reserved.</p>
         </footer>
 
     </div>
+    <script>
+
+        function Unit(uid) {
+            const button = document.createElement("button");
+            button.style.marginLeft = "5px";
+            const newP = document.createElement("p");
+            newP.innerText =uid; 
+            button.appendChild(newP);
+
+            const container = document.getElementById("button-container");
+            container.appendChild(button);
+        }
+
+        function land_size() {
+            let x = document.getElementById('min-area').value
+            let y = document.getElementById('max-area').value
+            const button = document.createElement("button");
+            button.style.marginLeft = "5px";
+
+            const newP = document.createElement("p");
+            newP.innerText ="Area: " + x + " X " + y; 
+            button.appendChild(newP);
+
+            const container = document.getElementById("button-container");
+            container.appendChild(button);
+            
+
+            // document.getElementById('min-size').innerHTML = "Area: " + x + " X " + y
+
+        }
+        
+        function Grow(uid) {
+            const button = document.createElement("button");
+            button.style.marginLeft = "5px";
+
+            const newP = document.createElement("p");
+            newP.innerText =uid; 
+            button.appendChild(newP);
+
+           
+            const container = document.getElementById("button-container");
+            container.appendChild(button);
+        }
+
+        function Pincode(uid) {
+            let x = document.getElementById('location').value
+
+            const button = document.createElement("button");
+            button.style.marginLeft = "5px";
+
+            const newP = document.createElement("p");
+            newP.innerText ="Nearby : "+x; 
+            button.appendChild(newP);
+
+           
+            const container = document.getElementById("button-container");
+            container.appendChild(button);
+        }
+    </script>
 
 
 </body>
