@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <script src="java.js"></script>
 
     <style>
         .body {
@@ -51,11 +52,6 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
-        }
-
-        img {
-            border: 0.8px solid #31352E;
-            box-shadow: 2px 2px 7px #31352E;
         }
 
         .loginbutton:hover {
@@ -177,7 +173,7 @@
                                     style="border-bottom: 2px solid white;">Yourland</a>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.html" class="nav-link text-light">Contact</a>
+                                <a href="profile.html" class="nav-link text-light">Profile</a>
                             </li>
                         </ul>
                     </div>
@@ -229,17 +225,17 @@
                                 class="form-control">
                         </div>
                         <button class="btn btn-primary rounded-4  " onclick="land_size()"
-                            style="padding: 3px; margin: 7px; width: 90px; margin-left: 70px; "> Apply</button>
+                            style="padding: 3px; margin: 7px; width: 90px; margin-left: 70px;"> Apply</button>
 
                     </div>
 
                     <hr>
 
                     <label for="location" class="form-label">Enter Location:</label>
-                    <input type="text" id="location" name="location"  class="form-control mb-3"
+                    <input type="text" id="location" name="location" class="form-control mb-3"
                         placeholder="City, State, or Zip Code">
-                        <button class="btn btn-primary rounded-4  " onclick="Pincode()"
-                            style="padding: 3px; margin: 0px; width: 90px; margin-left: 70px; "> Apply</button>
+                    <button class="btn btn-primary rounded-4  " onclick="Pincode()"
+                        style="padding: 3px; margin: 0px; width: 90px; margin-left: 70px; "> Apply</button>
                     <hr>
 
                     <label for="crops" class="form-label">Select Crops to Grow:</label>
@@ -266,83 +262,81 @@
                     <hr>
                 </div>
 
-                <div class="col-md-9 "
-                    style="border-left: 1px solid rgb(158, 158, 158) ;overflow: scroll; height: 100vh; ">
+                <div class="col-md-10"
+                    style="border-left: 1px solid rgb(158, 158, 158) ;overflow: scroll; height: 90vh; ">
+                    <div class="row">
+                        <div class="filter-header  rounded-4 m-4" id="button-container">
+                            <span>Filter Applied :</span>
+                        </div>
+                    </div>
+                    <div class="card_div d-flex flex-wrap gap-3 ms-3">
 
+                        <div class="card" style="width: 17rem;">
+                            <img src="images/pic1.jpg" class="card-img-top img-fluid" alt="Land Image">
+                            <div class="card-body">
+                                <h5 class="card-title">MR. Nishant</h5>
+                                <p class="card-text"><strong>Location:</strong> XYZ City</p>
+                                <p class="card-text"><strong>Price:</strong> ₹1000</p>
+                                <p class="card-text"><strong>Pincode:</strong> 560001</p>
+                                <p class="card-text"><strong>Area:</strong> 1000 sq. ft.</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 17rem;">
+                            <img src="images/pic1.jpg" class="card-img-top img-fluid" alt="Land Image">
+                            <div class="card-body">
+                                <h5 class="card-title">MR. Nishant</h5>
+                                <p class="card-text"><strong>Location:</strong> XYZ City</p>
+                                <p class="card-text"><strong>Price:</strong> ₹1000</p>
+                                <p class="card-text"><strong>Pincode:</strong> 560001</p>
+                                <p class="card-text"><strong>Area:</strong> 1000 sq. ft.</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 17rem;">
+                            <img src="images/pic1.jpg" class="card-img-top img-fluid" alt="Land Image">
+                            <div class="card-body">
+                                <h5 class="card-title">MR. Nishant</h5>
+                                <p class="card-text"><strong>Location:</strong> XYZ City</p>
+                                <p class="card-text"><strong>Price:</strong> ₹1000</p>
+                                <p class="card-text"><strong>Pincode:</strong> 560001</p>
+                                <p class="card-text"><strong>Area:</strong> 1000 sq. ft.</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 17rem;">
+                            <img src="images/pic1.jpg" class="card-img-top img-fluid" alt="Land Image">
+                            <div class="card-body">
+                                <h5 class="card-title">MR. Nishant</h5>
+                                <p class="card-text"><strong>Location:</strong> XYZ City</p>
+                                <p class="card-text"><strong>Price:</strong> ₹1000</p>
+                                <p class="card-text"><strong>Pincode:</strong> 560001</p>
+                                <p class="card-text"><strong>Area:</strong> 1000 sq. ft.</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 17rem;">
+                            <img src="images/pic1.jpg" class="card-img-top img-fluid" alt="Land Image">
+                            <div class="card-body">
+                                <h5 class="card-title">MR. Nishant</h5>
+                                <p class="card-text"><strong>Location:</strong> XYZ City</p>
+                                <p class="card-text"><strong>Price:</strong> ₹1000</p>
+                                <p class="card-text"><strong>Pincode:</strong> 560001</p>
+                                <p class="card-text"><strong>Area:</strong> 1000 sq. ft.</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
 
-                    <div class="filter-header  rounded-4 m-4" id="button-container" >
-                        <span>Filter Applied :</span>
-                        
                     </div>
 
                 </div>
             </div>
         </div>
 
-        <footer class="bg-light text-center py-3">
-            <p>&copy; 2025 AgriConnect. All Rights Reserved.</p>
-        </footer>
+
 
     </div>
-    <script>
-
-        function Unit(uid) {
-            const button = document.createElement("button");
-            button.style.marginLeft = "5px";
-            const newP = document.createElement("p");
-            newP.innerText =uid; 
-            button.appendChild(newP);
-
-            const container = document.getElementById("button-container");
-            container.appendChild(button);
-        }
-
-        function land_size() {
-            let x = document.getElementById('min-area').value
-            let y = document.getElementById('max-area').value
-            const button = document.createElement("button");
-            button.style.marginLeft = "5px";
-
-            const newP = document.createElement("p");
-            newP.innerText ="Area: " + x + " X " + y; 
-            button.appendChild(newP);
-
-            const container = document.getElementById("button-container");
-            container.appendChild(button);
-            
-
-            // document.getElementById('min-size').innerHTML = "Area: " + x + " X " + y
-
-        }
-        
-        function Grow(uid) {
-            const button = document.createElement("button");
-            button.style.marginLeft = "5px";
-
-            const newP = document.createElement("p");
-            newP.innerText =uid; 
-            button.appendChild(newP);
-
-           
-            const container = document.getElementById("button-container");
-            container.appendChild(button);
-        }
-
-        function Pincode(uid) {
-            let x = document.getElementById('location').value
-
-            const button = document.createElement("button");
-            button.style.marginLeft = "5px";
-
-            const newP = document.createElement("p");
-            newP.innerText ="Nearby : "+x; 
-            button.appendChild(newP);
-
-           
-            const container = document.getElementById("button-container");
-            container.appendChild(button);
-        }
-    </script>
+    
 
 
 </body>
