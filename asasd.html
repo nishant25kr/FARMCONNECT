@@ -32,7 +32,6 @@
         .agroconnect-header:hover {
             background-color: #778A35;
             border-color: #050505;
-
             scale: 1.02;
             /* transform: translateY(-2px); */
         }
@@ -122,78 +121,45 @@
             flex: 1;
             
         }
-        .form-container {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin-top: 50px;
+        body {
+            background-color: #EBEBE8;
+            font-family: 'Arial', sans-serif;
         }
-
-        .form-container .form-label {
-            font-weight: 600;
-            color: #333;
+        .navbar {
+            background-color: #5A7D2B;
         }
-
-        .form-container .form-control {
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            box-shadow: none;
-        }
-
-        .form-container .form-control:focus {
-            border-color: #78C6A2;
-            box-shadow: 0 0 5px rgba(120, 198, 162, 0.5);
-        }
-
-        .form-container .btn-submit {
-            background-color: #78C6A2;
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
             color: white;
-            font-weight: 600;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            width: 100%;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
         }
-
-        .form-container .btn-submit:hover {
-            background-color: #64a788;
+        .nav-link {
+            color: white;
         }
-
-        .form-container .row {
-            margin-bottom: 20px;
-        }
-
-        .form-container .col-md-6 {
-            margin-bottom: 20px;
-        }
-
-        .form-container .col-md-6:last-child {
-            margin-bottom: 0;
-        }
-
-        .form-container h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 30px;
-        }
-
-        .form-container .mb-3 {
-            margin-bottom: 15px;
-        }
-        .content-wrapper {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
         .main-content {
-            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .contact-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 60%;
+            display: flex;
+            gap: 20px;
+        }
+        .form-container {
             flex: 1;
-            
+        }
+        .illustration {
+            flex: 1;
+        }
+        .illustration img {
+            width: 100%;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -204,12 +170,11 @@
         <header>
             <nav class="navbar navbar-expand-lg" style="background-color: #778A35;">
                 <div class="container-fluid d-flex align-items-center">
-
                     <a class="navbar-brand text-light fw-bold fs-3 agroconnect-header" href="#">AgroConnect</a>
         
 
                     <button class="navbar-toggler text-light border-0" type="button" data-bs-toggle="collapse"
-                        data-bs-target="" aria-controls="navbarNav" aria-expanded="false"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -218,77 +183,56 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a href="Index.html" class="nav-link text-light active">Home</a>
+                                <a href="#" class="nav-link text-light active" style="border-bottom: 2px solid white;">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="About.html" class="nav-link active text-light">About</a>
+                                <a href="About.html" class="nav-link  text-light">About</a>
                             </li>
                             <li class="nav-item">
                                 <a href="buyland.html" class="nav-link text-light">Yourland</a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link text-light"  style="border-bottom: 2px solid white;">Profile</a>
-                            </li>
-                            <li class="nav-item" ">
-                                <a href="contact.html" class="nav-link text-light">Contact Us</a>
+                                <a href="profile.html" class="nav-link text-light">Profile</a>
                             </li>
                         </ul>
                     </div>
         
-
                     <button class="loginbutton">
-                        <a href="profile.html"><img src="images/user.png" alt="" style="width: 19px;"></a>
-                        Welcome Mr.Nishant
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link text-light">Longin/sighup</a>
+                        </li>
                     </button>
                 </div>
             </nav>
         </header>
-
-        <main class="container mb-5">
-            <div class="form-container">
-                <h2>Profile</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <form>
-                            <div class="mb-3">
-                                <label for="firstName" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
-                            </div>
-                            <div class="mb-3">
-                                <label for="lastName" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-md-6">
-                        <form>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
-                            </div>
-                            <div class="mb-3">
-                                <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address" placeholder="Enter your address">
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
-                            </div>
-                            <button type="submit" class="btn-submit">Submit</button>
-                        </form>
-                    </div>
+        
+        <main class="main-content w-100">
+            <div class="contact-container">
+                <div class="form-container">
+                    <h2>Contact Us</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+                <div class="illustration" style="align-items: center;">
+                    <img src="images/image-500x400.jpg" style=" margin-top: 30px;" class="img-fluid" salt="Agriculture Illustration">
                 </div>
             </div>
         </main>
-        
-        
-        
 
-        <footer class="bg-light text-center py-3 mt-5">
+        <footer class="bg-light text-center py-3">
             <p>&copy; 2025 AgriConnect. All Rights Reserved.</p>
         </footer>
 
